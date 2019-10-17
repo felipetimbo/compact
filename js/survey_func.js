@@ -106,7 +106,7 @@
 						document.getElementById("previous").style.display = "none";
 						document.getElementById("next").click();
 					}
-					if($("#question_1").text() == 'Sensitivity, Motor'){
+					if($("#question_1").text() == 'Sensory, Motor'){
 						document.getElementById("q4").style.display = "none";
 						document.getElementById("q4pure").classList.remove('required');
 						document.getElementById("q4bilateral").classList.remove('required');
@@ -150,7 +150,7 @@
 						document.getElementById("result").innerHTML = "PACI – Partial Anterior Circulation Infarct. <br /> HCF: Pure.";
 					}
 
-					if($("#question_1").text() == 'Hemianopsia'){
+					if($("#question_1").text() == 'Hemianopia'){
 						document.getElementById("q4").style.display = "none";
 						document.getElementById("q4pure").classList.remove('required');
 						document.getElementById("q4bilateral").classList.remove('required');
@@ -169,15 +169,15 @@
 						document.getElementById("q5summary").style.display = "none";
 						document.getElementById("next").click();
 
-						document.getElementById("result").innerHTML = "POCI – Posterior Circulation	Infarction. <br /> Hemianopsia <br /> Homonymous/Cort. Blindness";
+						document.getElementById("result").innerHTML = "POCI – Posterior Circulation	Infarction. <br /> Hemianopia <br /> Homonymous/Cort. Blindness";
 					}
 
-					if($("#question_1").text() == 'Sensitivity, Higher cerebral functions' || 
-						$("#question_1").text() == 'Sensitivity, Hemianopsia' || 
+					if($("#question_1").text() == 'Sensory, Higher cerebral functions' || 
+						$("#question_1").text() == 'Sensory, Hemianopia' || 
 						$("#question_1").text() == 'Motor, Higher cerebral functions' || 
-						$("#question_1").text() == 'Motor, Hemianopsia' || 
-						$("#question_1").text() == 'Higher cerebral functions, Hemianopsia' || 
-						$("#question_1").text() == 'Sensitivity, Motor, Hemianopsia'){
+						$("#question_1").text() == 'Motor, Hemianopia' || 
+						$("#question_1").text() == 'Higher cerebral functions, Hemianopia' || 
+						$("#question_1").text() == 'Sensory, Motor, Hemianopia'){
 
 						document.getElementById("q4").style.display = "none";
 						document.getElementById("q4pure").classList.remove('required');
@@ -199,10 +199,10 @@
 
 						document.getElementById("result").innerHTML = "PACI – Partial Anterior Circulation Infarct.";
 					}
-					if($("#question_1").text() == 'Sensitivity, Motor, Higher cerebral functions' || 
-						$("#question_1").text() == 'Sensitivity, Higher cerebral functions, Hemianopsia' || 
-						$("#question_1").text() == 'Sensitivity, Motor, Higher cerebral functions, Hemianopsia' || 
-						$("#question_1").text() == 'Motor, Higher cerebral functions, Hemianopsia'){
+					if($("#question_1").text() == 'Sensory, Motor, Higher cerebral functions' || 
+						$("#question_1").text() == 'Sensory, Higher cerebral functions, Hemianopia' || 
+						$("#question_1").text() == 'Sensory, Motor, Higher cerebral functions, Hemianopia' || 
+						$("#question_1").text() == 'Motor, Higher cerebral functions, Hemianopia'){
 						document.getElementById("q4").style.display = "none";
 						document.getElementById("q4pure").classList.remove('required');
 						document.getElementById("q4bilateral").classList.remove('required');
@@ -247,7 +247,7 @@
 				}
  
 				if ($("#question_3").text() == 'No' && state.stepsComplete == 4 ){
-					if($("#question_1").text() == 'Sensitivity'){
+					if($("#question_1").text() == 'Sensory'){
 						if($("#question_4").text() == 'Pure'){
 							document.getElementById("q5").style.display = "none";
 							document.getElementById("q5ataxic").classList.remove('required');
