@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10879343-5"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-10879343-5');
+	</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Compact, Computerized Oxfordshire Community Stroke Project Classification.">
+    <meta name="author" content="Ansonika">
+    <title>Compact - Computerized Oxfordshire Community Stroke Project Classification</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+	
+	<!-- /menu -->
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper">
+					<div>
+						<figure><img src="img/compact_logo.png" alt="" class="img-logo"></figure>
+						<!-- <h2>Compact</h2> -->
+						<!-- <p> Computerized Oxfordshire Community Stroke Project Classification. <br /> -->
+						<!-- <p>	Identify the most severe and/or well-described neurologic symptom in the clinical case.</p> -->
+						<a href="#start" class="btn_1 rounded mobile_btn">Start</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+							<div id="progressbar"></div>
+						</div>
+						<form id="wrapped" method="POST">
+							<input id="website" name="website" type="text" value="">
+							<!-- Leave for security protection, read docs for details -->
+							<div id="middle-wizard">
+								<div class="step">
+									<h3 class="main_question">Based on the neurological exam on admission, select the groups of symptoms bellow, if applicable:</h3>
+									<div class="form-group">
+										<label class="container_check version_2">Sensory
+											<input type="checkbox" name="question_1[]" value="Sensory" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Motor
+											<input type="checkbox" name="question_1[]" value="Motor" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Higher cerebral functions
+											<input type="checkbox" name="question_1[]" value="Higher cerebral functions" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_check version_2">Hemianopia
+											<input type="checkbox" name="question_1[]" value="Hemianopia" onchange="getVals(this, 'question_1');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question">Does the patient present Gaze Palsy or Skew Deviation or Cerebellar Dysfunction (without ipsilateral long-tract deficit; i.e. ataxic hemiparesis)?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input type="radio" name="question_2" value="Yes" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input type="radio" name="question_2" value="No" class="required" onchange="getVals(this, 'question_2');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+
+								<!-- /step-->
+								<div class="step" id="q3">
+									<h3 class="main_question">Does the patient present Cranial Nerve Palsy?</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Yes
+											<input id="q3yes" type="radio" name="question_3" value="Yes" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">No
+											<input id="q3no" type="radio" name="question_3" value="No" class="required" onchange="getVals(this, 'question_3');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+
+								<!-- /step-->
+								<div class="step" id="q4" >
+									<h3 class="main_question">Define the pattern of Sensory loss:</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Pure
+											<input id="q4pure" type="radio" name="question_4" value="Pure" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Bilateral
+											<input id="q4bilateral" type="radio" name="question_4" value="Bilateral" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Restricted
+											<input id="q4restricted" type="radio" name="question_4" value="Restricted" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Contralateral Cranial-Nerve Palsy
+											<input id="q4contralateral" type="radio" name="question_4" value="Contralateral Cranial-Nerve Palsy" class="required" onchange="getVals(this, 'question_4');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+
+								<!-- /step-->
+								<div class="step" id="q5" >
+									<h3 class="main_question">Define the pattern of Motor impairment:</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Ataxic
+											<input id="q5ataxic" type="radio" name="question_5" value="Ataxic" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Pure
+											<input id="q5pure" type="radio" name="question_5" value="Pure" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Bilateral
+											<input id="q5bilateral" type="radio" name="question_5" value="Bilateral" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="form-group">
+										<label class="container_radio version_2">Restricted
+											<input id="q5restricted" type="radio" name="question_5" value="Restricted" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>                         
+									<div class="form-group">
+										<label class="container_radio version_2">Clumsy-Hand
+											<input id="q5clumsy" type="radio" name="question_5" value="Clumsy-Hand" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div> 
+									<div class="form-group">
+										<label class="container_radio version_2">Contralateral Cranial-Nerve Palsy
+											<input id="q5contralateral" type="radio" name="question_5" value="Contralateral Cranial-Nerve Palsy" class="required" onchange="getVals(this, 'question_5');">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+							
+								<!-- /step-->
+								<div class="submit step">
+									<h3 class="main_question">Summary</h3>
+									<div class="summary">
+										<ul>
+											<li><strong>1</strong>
+												<h5>Based on the neuro exam on admission:</h5>
+												<p id="question_1"></p>
+											</li>
+											<li><strong>2</strong>
+												<h5>Gaze Palsy or Skew Deviation or Cerebellar Dysfunction:</h5>
+												<p id="question_2"></p>
+											</li>
+											<li id="q3summary" ><strong>3</strong>
+												<h5>Cranial Nerve Palsy:</h5>
+												<p id="question_3"></p>
+												<!-- <p id="additional_message"></p> -->
+											</li>
+											<li id="q4summary" ><strong>4</strong>
+												<h5>Pattern of Sensory Loss:</h5>
+												<p id="question_4"></p>
+											</li> 
+											<li id="q5summary" ><strong>4</strong>
+												<h5>Pattern of Motor impairment:</h5>
+												<p id="question_5"></p>
+											</li> 
+										</ul>
+									</div>
+									<h3 class="main_question">Result</h3>
+									     <p id="result"></p>
+								</div>
+								<!-- /step-->
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button id="previous" type="button" name="backward" class="backward">Prev</button>
+								<button id="next" type="button" name="forward" class="forward">Next</button>
+								<button id="restart" type="button" name="process" class="submit" onClick="window.location.reload();">Restart</button>
+							</div>
+							<!-- /bottom-wizard -->
+						</form>
+					</div>
+					<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+
+	<!-- SCRIPTS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/common_scripts.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/functions.js"></script>
+
+	<!-- Wizard script -->
+	<script src="js/survey_func.js"></script>
+
+</body>
+</html>
